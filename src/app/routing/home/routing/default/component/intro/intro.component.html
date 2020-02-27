@@ -1,0 +1,33 @@
+<section fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="8px">
+    <div fxFlex="40">
+      <mat-card class="padding-bottom-0-i">
+          <app-fixed-content bottom overlay>
+              <div class="margin-8px" fxLayout fxLayoutAlign="space-between center">
+                <button class="dimension-24px-i" mat-icon-button appAttrEffect="transform" effectInit="scale(1.2)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms">
+                  <mat-icon class="dimension-24px-i" appAttrEffect="fill" effectInit="rgb(0, 119, 181)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms" svgIcon="social:linkedin"></mat-icon>
+                </button>
+                <button class="dimension-30px-i" mat-icon-button appAttrEffect="transform" effectInit="scale(1.2)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms">
+                    <mat-icon class="dimension-24px-i" appAttrEffect="fill" effectInit="rgb(0, 0, 0)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms" svgIcon="social:github"></mat-icon>
+                  </button>
+                <button class="dimension-24px-i" mat-icon-button appAttrEffect="transform" effectInit="scale(1.2)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms">
+                  <mat-icon class="dimension-24px-i" appAttrEffect="fill" effectInit="rgb(59, 89, 152)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms" svgIcon="social:facebook"></mat-icon>
+                </button>
+                <button class="dimension-24px-i" mat-icon-button appAttrEffect="transform" effectInit="scale(1.2)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms">
+                  <mat-icon class="dimension-24px-i" appAttrEffect="fill" effectInit="rgb(205, 72, 107)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms" svgIcon="social:instagram"></mat-icon>
+                </button>
+                <button class="dimension-24px-i" mat-icon-button appAttrEffect="transform" effectInit="scale(1.2)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms">
+                  <mat-icon class="dimension-24px-i" appAttrEffect="fill" effectInit="rgb(29, 161, 242)" effectInitOn="mouseenter" effectEndOn="mouseleave" effectTransition="100ms" svgIcon="social:twitter"></mat-icon>
+                </button>
+              </div>
+            </app-fixed-content>
+        <mat-card-header>
+          <div mat-card-avatar></div>
+          <mat-card-title>{{ Environment.author.name + " " + Environment.author.surname }}</mat-card-title>
+          <mat-card-subtitle>{{ Environment.author.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="Environment.link.image.profile" [alt]="Environment.author.name">
+      </mat-card>
+    </div>
+    <div fxFlex>
+    </div>
+  </section>

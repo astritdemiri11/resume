@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" fxLayoutAlign="space-between center">
+    <div>
+      <div *ngIf="layoutConfig.breakpoint.isHandset$ | async">
+        <button (click)="onMenuClick()" mat-icon-button>
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div>
+      <div>
+        <button *ngIf="layoutConfig.theme.type === ThemeEnum.Light; else darkThemeButton" mat-icon-button (click)="onThemeChange(ThemeEnum.Dark)">
+          <mat-icon svgIcon="other:moon"></mat-icon>
+        </button>
+        <ng-template #darkThemeButton>
+            <button mat-icon-button (click)="onThemeChange(ThemeEnum.Light)">
+                <mat-icon svgIcon="other:sun"></mat-icon>
+              </button>
+        </ng-template>
+      </div>
+    </div>
+  </mat-toolbar>

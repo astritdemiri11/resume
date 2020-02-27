@@ -1,0 +1,30 @@
+app-fixed-content {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+app-fixed-content.bottom {
+    bottom: 0;
+}
+
+app-fixed-content.top {
+    top: 0;
+}
+
+app-fixed-content.right {
+    right: 0;
+    left: auto;
+}
+
+app-fixed-content.overlay {
+    background: rgba(0,0,0, .48);
+    overflow: hidden;
+}
+
+app-fixed-content.overlay .mat-icon {
+    color: rgb(255,255,255);
+    opacity: .7;
+}

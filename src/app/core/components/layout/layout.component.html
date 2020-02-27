@@ -1,0 +1,23 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+      #matLeftSidenav
+      class="sidenav"
+      fixedInViewport
+      [attr.role]="(layoutConfig.breakpoint.isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(layoutConfig.breakpoint.isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(layoutConfig.breakpoint.isHandset$ | async)">
+      <app-aside (menuItemClick)="(matLeftSidenav.mode ==='over' ? matLeftSidenav.close() : null)"></app-aside>
+  </mat-sidenav>
+  <mat-sidenav-content fxLayout="column">
+    <app-header (menuClick)="matLeftSidenav.open()"></app-header>
+    <main fxFlex class="scroll y-scroll mat-typography">
+        <div class="margin-8px" fxLayout>
+            <div fxFlex fxFlex.sm="50%" fxFlexOffset.sm="25%" fxFlex.gt-sm="80%" fxFlexOffset.gt-sm="10%">
+              <div class="main-container">
+                  <router-outlet></router-outlet>
+              </div>
+            </div>
+        </div>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

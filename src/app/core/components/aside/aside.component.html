@@ -1,0 +1,45 @@
+<mat-toolbar color="primary" fxLayoutAlign="center center">
+    <img [src]="Environment.link.image.logoWhite" class="max-height-100p"/>
+</mat-toolbar>
+<mat-nav-list>
+<mat-list-item routerLink="/home" (click)="onMenuItemClick()">
+    <div matLine fxLayout fxLayoutAlign="center">
+        <mat-icon>home</mat-icon>
+    </div>
+    <h4 matLine fxLayout fxLayoutAlign="center">
+        <span>Home</span>
+    </h4>
+</mat-list-item>
+<mat-list-item routerLink="/resume" (click)="onMenuItemClick()">
+    <div matLine fxLayout fxLayoutAlign="center">
+        <mat-icon>file_copy</mat-icon>
+    </div>
+    <h4 matLine fxLayout fxLayoutAlign="center">
+        <span>Resume</span>
+    </h4>
+</mat-list-item>
+<mat-list-item routerLink="/portfolio" (click)="onMenuItemClick()">
+    <div matLine fxLayout fxLayoutAlign="center">
+        <mat-icon>folder_open</mat-icon>
+    </div>
+    <h4 matLine fxLayout fxLayoutAlign="center">
+        <span>Portfolio</span>
+    </h4>
+</mat-list-item>
+<mat-list-item routerLink="/blog" (click)="onMenuItemClick()">
+    <div matLine fxLayout fxLayoutAlign="center">
+        <mat-icon>question_answer</mat-icon>
+    </div>
+    <h4 matLine fxLayout fxLayoutAlign="center">
+        <span>Blog</span>
+    </h4>
+</mat-list-item>
+<mat-list-item routerLink="/contactus" (click)="onMenuItemClick()">
+    <div matLine fxLayout fxLayoutAlign="center">
+        <mat-icon>contact_mail</mat-icon>
+    </div>
+    <h4 matLine fxLayout fxLayoutAlign="center">
+        <span>Contact Us</span>
+    </h4>
+</mat-list-item>
+</mat-nav-list>
